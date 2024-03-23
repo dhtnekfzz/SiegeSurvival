@@ -75,6 +75,9 @@ public:
 	UFUNCTION(BlueprintCallable, BlueprintPure = false, Category = "Lyra|Health", Meta = (ExpandBoolAsExecs = "ReturnValue"))
 	bool IsDeadOrDying() const { return (DeathState > ELyraDeathState::NotDead); }
 
+	UFUNCTION(BlueprintCallable, Category = "SS|Movement")
+	float GetMoveSpeed() const;
+
 	// Begins the death sequence for the owner.
 	virtual void StartDeath();
 

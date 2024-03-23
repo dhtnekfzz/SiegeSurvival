@@ -172,6 +172,9 @@ bool FLyraCharacterPartList::SpawnActorForEntry(FLyraAppliedCharacterPartEntry& 
 
 				if (AActor* SpawnedActor = PartComponent->GetChildActor())
 				{
+					// Mesh3p 오너 설정
+					SpawnedActor->SetOwner(OwnerComponent->GetOwner());
+
 					switch (Entry.Part.CollisionMode)
 					{
 					case ECharacterCustomizationCollisionMode::UseCollisionFromCharacterPart:

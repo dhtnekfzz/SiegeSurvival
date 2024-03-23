@@ -39,6 +39,7 @@ public:
 	ATTRIBUTE_ACCESSORS(ULyraHealthSet, MaxHealth);
 	ATTRIBUTE_ACCESSORS(ULyraHealthSet, Healing);
 	ATTRIBUTE_ACCESSORS(ULyraHealthSet, Damage);
+	ATTRIBUTE_ACCESSORS(ULyraHealthSet, MoveSpeed)
 
 	// Delegate when health changes due to damage/healing, some information may be missing on the client
 	mutable FLyraAttributeEvent OnHealthChanged;
@@ -49,6 +50,9 @@ public:
 	// Delegate to broadcast when the health attribute reaches zero
 	mutable FLyraAttributeEvent OnOutOfHealth;
 
+	UPROPERTY(BlueprintReadOnly, ReplicatedUsing = OnRep_MoveSpeed, Category = "SS|Attribute")
+	FGameplayAttributeData MoveSpeed;
+
 protected:
 
 	UFUNCTION()
@@ -56,6 +60,9 @@ protected:
 
 	UFUNCTION()
 	void OnRep_MaxHealth(const FGameplayAttributeData& OldValue);
+
+	UFUNCTION()
+	void OnRep_MoveSpeed(const FGameplayAttributeData& OldValue);
 
 	virtual bool PreGameplayEffectExecute(FGameplayEffectModCallbackData& Data) override;
 	virtual void PostGameplayEffectExecute(const FGameplayEffectModCallbackData& Data) override;

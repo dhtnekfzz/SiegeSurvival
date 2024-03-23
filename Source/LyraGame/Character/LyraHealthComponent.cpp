@@ -232,6 +232,12 @@ void ULyraHealthComponent::OnRep_DeathState(ELyraDeathState OldDeathState)
 	ensureMsgf((DeathState == NewDeathState), TEXT("LyraHealthComponent: Death transition failed [%d] -> [%d] for owner [%s]."), (uint8)OldDeathState, (uint8)NewDeathState, *GetNameSafe(GetOwner()));
 }
 
+float ULyraHealthComponent::GetMoveSpeed() const
+{
+	return (HealthSet ? HealthSet->GetMoveSpeed() : 0.0f);
+	
+}
+
 void ULyraHealthComponent::StartDeath()
 {
 	if (DeathState != ELyraDeathState::NotDead)
