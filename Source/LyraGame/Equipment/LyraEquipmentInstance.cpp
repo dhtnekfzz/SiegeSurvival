@@ -11,6 +11,8 @@
 #include "Iris/ReplicationSystem/ReplicationFragmentUtil.h"
 #endif // UE_WITH_IRIS
 
+#include "Weapons/SSWeaponBase.h"
+
 #include UE_INLINE_GENERATED_CPP_BY_NAME(LyraEquipmentInstance)
 
 class FLifetimeProperty;
@@ -88,6 +90,8 @@ void ULyraEquipmentInstance::SpawnEquipmentActors(const TArray<FLyraEquipmentAct
 			NewActor->AttachToComponent(AttachTarget, FAttachmentTransformRules::KeepRelativeTransform, SpawnInfo.AttachSocket);
 
 			SpawnedActors.Add(NewActor);
+			
+	
 		}
 	}
 }
@@ -115,5 +119,6 @@ void ULyraEquipmentInstance::OnUnequipped()
 
 void ULyraEquipmentInstance::OnRep_Instigator()
 {
+	
 }
 

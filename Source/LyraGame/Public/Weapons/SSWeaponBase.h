@@ -6,6 +6,15 @@
 #include "GameFramework/Actor.h"
 #include "SSWeaponBase.generated.h"
 
+UENUM(BlueprintType)
+enum class EWeaponType : uint8
+{
+	Pistol UMETA(DisplayName = "Pistol"),
+	Rifle UMETA(DisplayName = "Rifle"),
+	Shotgun UMETA(DisplayName = "Shotgun"),
+};
+
+
 UCLASS()
 class LYRAGAME_API ASSWeaponBase : public AActor
 {
@@ -28,6 +37,9 @@ public:
 	FORCEINLINE USkeletalMeshComponent* GetWeaponMesh3P() const { return WeaponMesh_3p; }
 
 protected:
+
+
+protected:
 	
 	UPROPERTY(EditDefaultsOnly, Category= "Weapon")
 	TObjectPtr<USkeletalMeshComponent> WeaponMesh_1p;
@@ -43,6 +55,5 @@ protected:
 
 	UFUNCTION(BlueprintPure, Category = "Weapon")
 	USkeletalMeshComponent* GetProperWeaponMesh() const;
-
 
 };

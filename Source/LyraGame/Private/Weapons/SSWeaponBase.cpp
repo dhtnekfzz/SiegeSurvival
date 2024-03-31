@@ -22,7 +22,7 @@ ASSWeaponBase::ASSWeaponBase()
 	WeaponMesh_1p->bCastHiddenShadow = false;
 	WeaponMesh_1p->SetOnlyOwnerSee(true);	
 	WeaponMesh_1p->SetOwnerNoSee(true);
-
+	
 }
 
 // Called when the game starts or when spawned
@@ -57,8 +57,13 @@ void ASSWeaponBase::BeginPlay()
 	}
 }
 
+
+
 USkeletalMeshComponent* ASSWeaponBase::GetProperWeaponMesh() const
 {
-	return nullptr;
+	APawn* PawnOwner = Cast<APawn>(GetOwner());
+	ASSCharacter* Character= Cast<ASSCharacter>(PawnOwner);
+	
+	return PawnOwner->IsLocallyControlled() && Character->IsFirstPerson ? WeaponMesh_1p : WeaponMesh_3p;
 }
 

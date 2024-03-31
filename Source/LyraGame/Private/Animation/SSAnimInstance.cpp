@@ -52,6 +52,11 @@ void USSAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 	ULyraCharacterMovementComponent* CharMoveComp = CastChecked<ULyraCharacterMovementComponent>(SSCharacter->GetCharacterMovement());
 	const FLyraCharacterGroundInfo& GroundInfo = CharMoveComp->GetGroundInfo();
 	GroundDistance = GroundInfo.GroundDistance;
+
+	if(bInterpAiming)
+	{
+		InterpAiming(DeltaSeconds);
+	}
 }
 
 void USSAnimInstance::SetRelativeHandTransform()

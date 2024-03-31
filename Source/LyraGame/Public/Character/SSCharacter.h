@@ -6,10 +6,31 @@
 #include "Character/LyraCharacter.h"
 #include "SSCharacter.generated.h"
 
+enum class EWeaponType : uint8;
 class ULyraCameraComponent;
 /**
  * 
  */
+
+USTRUCT(BlueprintType)
+struct FWeaponExperience
+{
+	GENERATED_BODY()
+
+public:
+	// 현재 경험치
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Weapon|Level")
+	float CurrentEXP = 0.0f;
+
+	// 현재 레벨
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Weapon|Level")
+	int32 WeaponLevel = 1;
+
+	// 레벨업에 필요한 경험치 임계값
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Weapon|Level")
+	TArray<float> EXPThresholds;
+};
+
 UCLASS()
 class LYRAGAME_API ASSCharacter : public ALyraCharacter
 {
@@ -27,8 +48,7 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "SS|Character")
 	FORCEINLINE ULyraCameraComponent* GetCameraComponent() const {  return CameraComponent; }
-
-	//Weapon
+	
 	UFUNCTION(BlueprintPure, Category = "SS|Character")
 	FORCEINLINE class ASSWeaponBase* GetCurrentWeapon() const { return CurrentWeapon; }
 	
@@ -41,6 +61,14 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "SS|Character")
 	void SetIsFirstPerson();
 
+	UFUNCTION(BlueprintCallable, Category = "Weapon|Level")
+	void CheckLevelUp();
+	
+	UFUNCTION(BlueprintCallable, Category = "Weapon|Level")
+	void OnLevelUp();
+
+	UFUNCTION(BlueprintCallable, Category = "Weapon|Level")
+	void AddEXP(EWeaponType WeaponType, float EXP);
 	
 public:
 	//Weapon
@@ -49,6 +77,9 @@ public:
 
 	UPROPERTY(BlueprintReadOnly, Category = "SS|Character")
 	bool IsFirstPerson = false;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Weapon|Level")
+	TMap<EWeaponType, FWeaponExperience> WeaponExp;
 	
 private:
 

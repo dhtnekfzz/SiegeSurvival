@@ -16,6 +16,8 @@
 #include "NiagaraFunctionLibrary.h"
 #include "NiagaraSystem.h"
 #include "TimerManager.h"
+#include "Character/SSCharacter.h"
+#include "Inventory/LyraInventoryItemDefinition.h"
 
 #include UE_INLINE_GENERATED_CPP_BY_NAME(LyraWeaponSpawner)
 
@@ -136,6 +138,12 @@ void ALyraWeaponSpawner::AttemptPickUpWeapon_Implementation(APawn* Pawn)
 				SetWeaponPickupVisibility(false);
 				PlayPickupEffects();
 				StartCoolDown();
+
+				//SiegeSurvival: Add EXP to the weapon
+				EWeaponType WeaponType=WeaponItemDefinition->GetDefaultObject<ULyraInventoryItemDefinition>()->WeaponType;
+				ASSCharacter* Character = Cast<ASSCharacter>(Pawn);
+				Character->AddEXP( WeaponType, 100.0f);
+				
 			}
 		}		
 	}
