@@ -3,6 +3,7 @@
 #pragma once
 
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "Weapons/SSWeaponBase.h"
 
 #include "LyraInventoryItemDefinition.generated.h"
 
@@ -42,8 +43,16 @@ public:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category=Display, Instanced)
 	TArray<TObjectPtr<ULyraInventoryItemFragment>> Fragments;
 
+	// SiegeSurvival - Weapon Type
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Display)
+	EWeaponType WeaponType;
+
+	
 public:
 	const ULyraInventoryItemFragment* FindFragmentByClass(TSubclassOf<ULyraInventoryItemFragment> FragmentClass) const;
+
+	UFUNCTION(BlueprintCallable, Category=Display)
+	FORCEINLINE EWeaponType GetWeaponType() const { return WeaponType; }
 };
 
 //@TODO: Make into a subsystem instead?

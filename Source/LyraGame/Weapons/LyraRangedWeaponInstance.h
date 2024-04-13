@@ -6,6 +6,7 @@
 
 #include "LyraWeaponInstance.h"
 #include "AbilitySystem/LyraAbilitySourceInterface.h"
+#include "Weapons/SSWeaponInstance.h"
 
 #include "LyraRangedWeaponInstance.generated.h"
 
@@ -17,7 +18,7 @@ class UPhysicalMaterial;
  * A piece of equipment representing a ranged weapon spawned and applied to a pawn
  */
 UCLASS()
-class ULyraRangedWeaponInstance : public ULyraWeaponInstance, public ILyraAbilitySourceInterface
+class ULyraRangedWeaponInstance : public USSWeaponInstance, public ILyraAbilitySourceInterface
 {
 	GENERATED_BODY()
 

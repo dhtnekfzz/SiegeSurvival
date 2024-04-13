@@ -86,7 +86,7 @@ public:
 	UFUNCTION(BlueprintNativeEvent)
 	void AttemptPickUpWeapon(APawn* Pawn);
 
-	UFUNCTION(BlueprintImplementableEvent, Category = "Lyra|WeaponPickup")
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, BlueprintPure=false, Category = "Lyra|WeaponPickup")
 	bool GiveWeapon(TSubclassOf<ULyraInventoryItemDefinition> WeaponItemClass, APawn* ReceivingPawn);
 
 	void StartCoolDown();

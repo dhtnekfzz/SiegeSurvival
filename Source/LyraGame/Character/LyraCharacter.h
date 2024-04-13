@@ -7,6 +7,7 @@
 #include "GameplayTagAssetInterface.h"
 #include "ModularCharacter.h"
 #include "Teams/LyraTeamAgentInterface.h"
+#include "Camera/CameraComponent.h"
 
 #include "LyraCharacter.generated.h"
 
@@ -187,7 +188,7 @@ protected:
 
 	virtual bool CanJumpInternal_Implementation() const;
 
-private:
+protected:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Lyra|Character", Meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<ULyraPawnExtensionComponent> PawnExtComponent;
