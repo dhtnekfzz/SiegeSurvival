@@ -33,16 +33,22 @@ public:
 	UPROPERTY(BlueprintReadOnly, Category = "Procedual IK")
 	float AimAlpha = 0.0f;
 
+	UPROPERTY(BlueprintReadWrite, Category = "Procedual IK")
+    bool CanADS= false;
+
 	UFUNCTION(BlueprintCallable, Category = "Procedual IK")
 	void OnNewWeaponEquipped(float NewWeaponOffset);
 
 	UFUNCTION(BlueprintCallable, Category = "Procedual IK")
 	void SetIsAiming(bool bNewAiming);
 
+	UFUNCTION(BlueprintCallable, Category = "Procedual IK")
+	void OnAnimNotify_WeaponEquipComplete();
+
 protected:
 	
 	virtual void NativeUpdateAnimation(float DeltaSeconds) override;
-
+	
 	void SetRelativeHandTransform();
 	void SetSightTransform();
 	void InterpAiming(float DeltaSeconds);
@@ -57,6 +63,7 @@ private:
 	bool bInterpAiming = false;
 
 	bool bIsAiming = false;
+
 
 #pragma endregion
 	

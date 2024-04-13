@@ -58,5 +58,6 @@
 			"Name": "ShooterCore",
 			"Enabled": true
 		}
-	]
+	],
+	"NoCode": true
 }

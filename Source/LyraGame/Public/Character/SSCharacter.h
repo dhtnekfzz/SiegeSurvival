@@ -6,14 +6,29 @@
 #include "Character/LyraCharacter.h"
 #include "SSCharacter.generated.h"
 
+class ULyraInventoryItemDefinition;
 enum class EWeaponType : uint8;
 class ULyraCameraComponent;
 /**
  * 
  */
+USTRUCT(BlueprintType)
+struct FWeaponItem : public FTableRowBase
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(EditAnywhere, Category="Weapon|Level")
+	int32 WeaponLevel;
+
+	UPROPERTY(EditAnywhere, Category="Weapon|Level")
+	EWeaponType WeaponType;
+
+	UPROPERTY(EditAnywhere, Category="Weapon|Level")
+	TSubclassOf<ULyraInventoryItemDefinition> WeaponItemClass;
+};
 
 USTRUCT(BlueprintType)
-struct FWeaponExperience
+struct FWeaponExperience : public FTableRowBase
 {
 	GENERATED_BODY()
 
@@ -62,13 +77,22 @@ public:
 	void SetIsFirstPerson();
 
 	UFUNCTION(BlueprintCallable, Category = "Weapon|Level")
-	void CheckLevelUp();
+	void CheckLevelUp(EWeaponType WeaponType);
 	
 	UFUNCTION(BlueprintCallable, Category = "Weapon|Level")
-	void OnLevelUp();
+	void OnLevelUp(EWeaponType WeaponType, int32 Level);
 
 	UFUNCTION(BlueprintCallable, Category = "Weapon|Level")
 	void AddEXP(EWeaponType WeaponType, float EXP);
+
+	UFUNCTION(BlueprintCallable, Category = "Weapon|Level")
+	float GetWeaponExp(EWeaponType WeaponType) const;
+
+	UFUNCTION(BlueprintCallable, Category = "Weapon|Level")
+	FORCEINLINE int32 GetWeaponLevel(EWeaponType WeaponType) const { return WeaponExp.Contains(WeaponType) ? WeaponExp[WeaponType].WeaponLevel : 0; }
+
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, BlueprintPure=false, Category = "Weapon|Level")
+	bool WeaponLevelUp(TSubclassOf<ULyraInventoryItemDefinition> WeaponItemClass, APawn* ReceivingPawn, EWeaponType WeaponType);
 	
 public:
 	//Weapon
@@ -80,6 +104,12 @@ public:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Weapon|Level")
 	TMap<EWeaponType, FWeaponExperience> WeaponExp;
+
+	UPROPERTY(EditAnywhere,  Category="Weapon|Level")
+	TSubclassOf<ULyraInventoryItemDefinition> WeaponItemDefinition;
+
+	UPROPERTY(EditAnywhere,  Category="Weapon|Level")
+	TObjectPtr<UDataTable> WeaponItemTable;
 	
 private:
 

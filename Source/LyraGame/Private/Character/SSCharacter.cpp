@@ -3,12 +3,17 @@
 
 #include "Character/SSCharacter.h"
 
+#include "Inventory/LyraInventoryItemDefinition.h"
+#include "UObject/ConstructorHelpers.h"
 #include "Animation/LyraAnimInstance.h"
 #include "Animation/SSAnimInstance.h"
 #include "Camera/LyraCameraComponent.h"
 #include "Character/LyraCharacterMovementComponent.h"
 #include "Character/LyraHealthComponent.h"
+#include "Weapons/LyraWeaponSpawner.h"
 #include "Weapons/SSWeaponBase.h"
+
+
 
 
 ASSCharacter::ASSCharacter(const FObjectInitializer& ObjectInitializer)
@@ -21,8 +26,20 @@ ASSCharacter::ASSCharacter(const FObjectInitializer& ObjectInitializer)
 	Mesh1p->SetupAttachment(CameraComponent);
 	Mesh1p->SetOnlyOwnerSee(true);
 	Mesh1p->CastShadow = false;
-	Mesh1p->SetOwnerNoSee(true);
+	Mesh1p->SetOwnerNoSee(true);	
 
+	FWeaponExperience NewWeaponExp;
+	NewWeaponExp.EXPThresholds.Add(0.0f);
+	NewWeaponExp.EXPThresholds.Add(200.0f);
+	NewWeaponExp.EXPThresholds.Add(300.0f);
+	NewWeaponExp.EXPThresholds.Add(400.0f);
+	WeaponExp.Add(EWeaponType::Pistol, NewWeaponExp);
+
+	// static ConstructorHelpers::FClassFinder<ULyraInventoryItemDefinition> WeaponItemClass(TEXT("/Script/Engine.Blueprint'/Game/Weapons/Pistol/ID_Pistol_SSLv2.ID_Pistol_SSLv2'"));
+	// if (WeaponItemClass.Succeeded())
+	// {
+	// 	WeaponItemDefinition = WeaponItemClass.Class;
+	// }
 	
 }
 
@@ -63,16 +80,36 @@ void ASSCharacter::SetIsFirstPerson()
 	
 }
 
-void ASSCharacter::CheckLevelUp()
+void ASSCharacter::CheckLevelUp(EWeaponType WeaponType)
 {
+	if(!WeaponExp[WeaponType].EXPThresholds[WeaponExp[WeaponType].WeaponLevel]) return;
 
-	
+	if(WeaponExp[WeaponType].CurrentEXP>=WeaponExp[WeaponType].EXPThresholds[WeaponExp[WeaponType].WeaponLevel]
+	&& WeaponExp[WeaponType].WeaponLevel<WeaponExp[WeaponType].EXPThresholds.Num()-1)
+	{
+		WeaponExp[WeaponType].CurrentEXP-=WeaponExp[WeaponType].EXPThresholds[WeaponExp[WeaponType].WeaponLevel];
+		WeaponExp[WeaponType].WeaponLevel++;
+		OnLevelUp(WeaponType, WeaponExp[WeaponType].WeaponLevel);
+	}
+
+	return;
 }
 
-void ASSCharacter::OnLevelUp()
+void ASSCharacter::OnLevelUp(EWeaponType WeaponType, int32 Level)
 {
-	
+	for (const auto& Row : WeaponItemTable->GetRowMap())
+	{
+		FWeaponItem* WeaponData = (FWeaponItem*)Row.Value;
+		if (WeaponData->WeaponType ==  WeaponType && WeaponData->WeaponLevel == Level)
+		{
+			WeaponItemDefinition = WeaponData->WeaponItemClass;
+			WeaponLevelUp(WeaponItemDefinition, this, WeaponType);
+			break;
+		}
+	}
+
 }
+
 
 void ASSCharacter::AddEXP(EWeaponType WeaponType, float EXP)
 {
@@ -84,8 +121,18 @@ void ASSCharacter::AddEXP(EWeaponType WeaponType, float EXP)
 	else
 	{
 		FWeaponExperience NewWeaponExp;
+		NewWeaponExp.EXPThresholds.Add(0.0f);
+		NewWeaponExp.EXPThresholds.Add(200.0f);
+		NewWeaponExp.EXPThresholds.Add(300.0f);
+		NewWeaponExp.EXPThresholds.Add(400.0f);
 		WeaponExp.Add(WeaponType, NewWeaponExp);
+
+
 	}
-	CheckLevelUp();
-	UE_LOG( LogTemp, Log, TEXT("%d: %f"), WeaponType, WeaponExp[WeaponType].CurrentEXP);
+	CheckLevelUp(WeaponType);
+}
+
+float ASSCharacter::GetWeaponExp(EWeaponType WeaponType) const
+{
+	return WeaponExp.Contains(WeaponType) ? WeaponExp[WeaponType].CurrentEXP : 0.0f;
 }

@@ -2,6 +2,7 @@
 
 #include "LyraQuickBarComponent.h"
 
+#include "Inventory/LyraInventoryItemDefinition.h"
 #include "Equipment/LyraEquipmentDefinition.h"
 #include "Equipment/LyraEquipmentInstance.h"
 #include "Equipment/LyraEquipmentManagerComponent.h"
@@ -42,6 +43,7 @@ void ULyraQuickBarComponent::BeginPlay()
 
 	Super::BeginPlay();
 }
+
 
 void ULyraQuickBarComponent::CycleActiveSlotForward()
 {
@@ -107,6 +109,7 @@ void ULyraQuickBarComponent::EquipItemInSlot()
 		}
 	}
 }
+
 
 void ULyraQuickBarComponent::UnequipItemInSlot()
 {
@@ -174,6 +177,30 @@ void ULyraQuickBarComponent::AddItemToSlot(int32 SlotIndex, ULyraInventoryItemIn
 		{
 			Slots[SlotIndex] = Item;
 			OnRep_Slots();
+		}
+	
+	}
+}
+
+void ULyraQuickBarComponent::AddLevelUpWeaponToSlot(EWeaponType WeaponType, ULyraInventoryItemInstance* Item)
+{
+	for (int i = 0; i < Slots.Num(); i++)
+	{
+		if(Slots[i] != nullptr)
+		{
+			TSubclassOf<ULyraInventoryItemDefinition> ItemClass=Slots[i]->GetItemDef();
+			ULyraInventoryItemDefinition* SlotItemDef = ItemClass->GetDefaultObject<ULyraInventoryItemDefinition>();
+			if (SlotItemDef && SlotItemDef->GetWeaponType() == WeaponType)
+			{
+				Slots[i] = Item;
+				OnRep_Slots();
+				
+				UnequipItemInSlot();
+				ActiveSlotIndex = i; // 해당 Slot에 LevelUp 한 Weapon을 장착합니다.
+				EquipItemInSlot();
+				OnRep_ActiveSlotIndex();
+				break; // 일치하는 Slot을 찾았으므로 루프를 종료합니다.
+			}
 		}
 	}
 }

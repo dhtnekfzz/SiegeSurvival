@@ -4,6 +4,7 @@
 
 #include "Components/ControllerComponent.h"
 #include "Inventory/LyraInventoryItemInstance.h"
+#include "Weapons/SSWeaponBase.h"
 
 #include "LyraQuickBarComponent.generated.h"
 
@@ -52,6 +53,10 @@ public:
 	ULyraInventoryItemInstance* RemoveItemFromSlot(int32 SlotIndex);
 
 	virtual void BeginPlay() override;
+
+	// SS: Added for the level up system
+	UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly)
+	void AddLevelUpWeaponToSlot(EWeaponType WeaponType, ULyraInventoryItemInstance* Item);
 
 private:
 	void UnequipItemInSlot();

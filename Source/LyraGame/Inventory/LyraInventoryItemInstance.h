@@ -4,6 +4,7 @@
 
 #include "System/GameplayTagStack.h"
 #include "Templates/SubclassOf.h"
+#include "Weapons/SSWeaponBase.h"
 
 #include "LyraInventoryItemInstance.generated.h"
 
@@ -59,6 +60,7 @@ public:
 		return (ResultClass*)FindFragmentByClass(ResultClass::StaticClass());
 	}
 
+	
 private:
 #if UE_WITH_IRIS
 	/** Register all replication fragments */

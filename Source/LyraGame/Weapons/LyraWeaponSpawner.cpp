@@ -141,9 +141,10 @@ void ALyraWeaponSpawner::AttemptPickUpWeapon_Implementation(APawn* Pawn)
 
 				//SiegeSurvival: Add EXP to the weapon
 				EWeaponType WeaponType=WeaponItemDefinition->GetDefaultObject<ULyraInventoryItemDefinition>()->WeaponType;
-				ASSCharacter* Character = Cast<ASSCharacter>(Pawn);
-				Character->AddEXP( WeaponType, 100.0f);
-				
+				if(ASSCharacter* Character = Cast<ASSCharacter>(Pawn))
+				{
+					Character->AddEXP( WeaponType, 100.0f);
+				}
 			}
 		}		
 	}

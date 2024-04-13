@@ -8,19 +8,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9bd640df-5aa9-406c-b993-6f677dd56f48" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LyraStarterGame.dir/.idea/copilot/chatSessions/00000000000.xd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LyraStarterGame.dir/.idea/copilot/chatSessions/00000000000.xd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LyraStarterGame.dir/.idea/copilot/chatSessions/xd.lck" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LyraStarterGame.dir/.idea/copilot/chatSessions/xd.lck" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LyraStarterGame.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LyraStarterGame.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultGameplayTags.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGameplayTags.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/LyraGame/Equipment/LyraEquipmentInstance.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/LyraGame/Equipment/LyraEquipmentInstance.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/SiegeSurvival.uplugin" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/SiegeSurvival.uplugin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/LyraGame/Equipment/LyraQuickBarComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/LyraGame/Equipment/LyraQuickBarComponent.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/LyraGame/Equipment/LyraQuickBarComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/LyraGame/Equipment/LyraQuickBarComponent.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/LyraGame/Inventory/LyraInventoryItemDefinition.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/LyraGame/Inventory/LyraInventoryItemDefinition.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/LyraGame/Inventory/LyraInventoryItemInstance.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/LyraGame/Inventory/LyraInventoryItemInstance.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/LyraGame/Private/Animation/SSAnimInstance.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/LyraGame/Private/Animation/SSAnimInstance.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/LyraGame/Private/Character/SSCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/LyraGame/Private/Character/SSCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/LyraGame/Private/Weapons/SSWeaponBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/LyraGame/Private/Weapons/SSWeaponBase.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/LyraGame/Public/Animation/SSAnimInstance.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/LyraGame/Public/Animation/SSAnimInstance.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/LyraGame/Public/Character/SSCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/LyraGame/Public/Character/SSCharacter.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/LyraGame/Public/Weapons/SSWeaponBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/LyraGame/Public/Weapons/SSWeaponBase.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/LyraGame/Weapons/LyraWeaponSpawner.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/LyraGame/Weapons/LyraWeaponSpawner.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/LyraGame/Weapons/LyraWeaponSpawner.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/LyraGame/Weapons/LyraWeaponSpawner.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,49 +124,15 @@
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="cidr-memory-view://6" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Program Files/Epic Games/UE_5.3/Engine/Source/Developer/GraphColor/Private/GraphColor.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Program Files/Epic Games/UE_5.3/Engine/Source/Developer/GraphColor/Private/appconst.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Program Files/Epic Games/UE_5.3/Engine/Source/Developer/GraphColor/Private/graphColorVertices.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Program Files/Epic Games/UE_5.3/Engine/Source/Developer/GraphColor/Private/graphColorVertices.private.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Program Files/Epic Games/UE_5.3/Engine/Source/Runtime/Engine/Classes/Components/SceneComponent.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Program Files/Epic Games/UE_5.3/Engine/Source/Runtime/Engine/Private/Materials/MaterialInstanceDynamic.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Program Files/Epic Games/UE_5.3/Engine/Source/ThirdParty/Eigen/Eigen/src/Geometry/Quaternion.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.36.32532/include/atomic" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -205,6 +171,11 @@
     ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CidrLocalAttachDebugger.recentlyUsed">
+      <recent name="com.jetbrains.rider.cpp.debugger.RiderCppLLDBDriverConfiguration" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="LyraStarterGame" type="Uproject" factoryName="rider.uproject">
       <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/LyraStarterGame.uproject" />
@@ -348,6 +319,9 @@
       <workItem from="1711094153702" duration="823000" />
       <workItem from="1711349036201" duration="15013000" />
       <workItem from="1711603474248" duration="41258000" />
+      <workItem from="1711863315268" duration="15033000" />
+      <workItem from="1711960347213" duration="111714000" />
+      <workItem from="1712721910331" duration="21619000" />
     </task>
     <servers />
   </component>
@@ -355,6 +329,17 @@
     <option name="version" value="3" />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
@@ -362,8 +347,16 @@
     <watches-manager>
       <configuration name="Uproject">
         <watch expression="Pawn-&gt;ALyraCharacter" language="C++" />
-        <watch expression="Pawn-&gt;ALyraCharacter" />
+        <watch expression="Pawn-&gt;ALyraCharacter" language="C++" />
+        <watch expression="Stack" language="C++" />
+        <watch expression="(unsigned*)($rax + 0xc)" />
+        <watch expression="(unsigned*)($rax + 0xc)-&gt;*$330" />
+        <watch expression="this-&gt;WeaponMesh_1p" />
+        <watch expression="Category" />
       </configuration>
+      <inline-watch fileUrl="file://$PROJECT_DIR$/Source/LyraGame/Equipment/LyraQuickBarComponent.cpp" line="192">
+        <watch expression="SlotItemDef-&gt;WeaponType" language="C++" />
+      </inline-watch>
     </watches-manager>
   </component>
 </project>

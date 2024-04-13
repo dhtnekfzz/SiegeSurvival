@@ -24,8 +24,8 @@ void USSAnimInstance::OnNewWeaponEquipped(float NewWeaponOffset)
 	SightOffset = NewWeaponOffset;
 
 	FTimerHandle SyncWeapon_TimerHandle;
-
-	GetWorld()->GetTimerManager().SetTimer(SyncWeapon_TimerHandle, this, &ThisClass::FinalizeWeaponSync, 0.5f, false);
+	
+	GetWorld()->GetTimerManager().SetTimer(SyncWeapon_TimerHandle, this, &ThisClass::FinalizeWeaponSync, 0.55f, false);
 
 }
 
@@ -36,6 +36,14 @@ void USSAnimInstance::SetIsAiming(bool bNewAiming)
 		bIsAiming= bNewAiming;
 		bInterpAiming= true;
 	}
+}
+
+void USSAnimInstance::OnAnimNotify_WeaponEquipComplete()
+{
+	FTimerHandle SyncWeapon_TimerHandle;
+	
+	GetWorld()->GetTimerManager().SetTimer(SyncWeapon_TimerHandle, this, &ThisClass::FinalizeWeaponSync, 0.1f, false);
+	CanADS= true;
 }
 
 void USSAnimInstance::NativeUpdateAnimation(float DeltaSeconds)

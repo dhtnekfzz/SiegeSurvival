@@ -17,6 +17,19 @@ Content
 *.xcodeproj
 *.xcworkspace
 
+
 !Content/
-Content*
-!Content/Lyra
+Content/*
+!Content/SiegeSurvival/
+
+
+!Plugins/
+Plugins/*
+!Plugins/GameFeatures/
+Plugins/GameFeatures/*
+!Plugins/GameFeatures/SiegeSurvival/
+
+
+
+
+

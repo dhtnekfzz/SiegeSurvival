@@ -36,6 +36,13 @@ public:
 	UFUNCTION(BlueprintPure, Category = "Weapon")
 	FORCEINLINE USkeletalMeshComponent* GetWeaponMesh3P() const { return WeaponMesh_3p; }
 
+	UFUNCTION(BlueprintPure, Category = "WeaponType")
+	FORCEINLINE EWeaponType GetWeaponType() const { return WeaponType; }
+
+public:
+	UPROPERTY(EditAnywhere, Category = "WeaponType")
+	EWeaponType WeaponType;
+
 protected:
 
 
