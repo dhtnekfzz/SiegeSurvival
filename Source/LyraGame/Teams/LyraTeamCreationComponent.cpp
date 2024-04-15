@@ -90,10 +90,19 @@ void ULyraTeamCreationComponent::ServerChooseTeamForPlayer(ALyraPlayerState* PS)
 	{
 		PS->SetGenericTeamId(FGenericTeamId::NoTeam);
 	}
-	else
+	else // else 조건 논리 추가(변경)
 	{
-		const FGenericTeamId TeamID = IntegerToGenericTeamId(GetLeastPopulatedTeamID());
-		PS->SetGenericTeamId(TeamID);
+		// 플레이어가 봇일 때
+		if (PS->IsABot())
+		{
+			PS->SetGenericTeamId(IntegerToGenericTeamId(2)); // 팀 Id를 2로 설정
+		}
+		else // 플레이어가 사람일 때
+		{
+			PS->SetGenericTeamId(IntegerToGenericTeamId(1)); // 팀 Id를 1로 설정
+		}
+		/*const FGenericTeamId TeamID = IntegerToGenericTeamId(GetLeastPopulatedTeamID());
+		PS->SetGenericTeamId(TeamID);*/ // 이전 로직 주석 처리
 	}
 }
 
