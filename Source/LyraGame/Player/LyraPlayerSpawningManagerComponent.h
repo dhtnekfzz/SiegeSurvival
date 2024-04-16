@@ -33,7 +33,7 @@ protected:
 	// Utility
 	APlayerStart* GetFirstRandomUnoccupiedPlayerStart(AController* Controller, const TArray<ALyraPlayerStart*>& FoundStartPoints) const;
 	
-	virtual AActor* OnChoosePlayerStart(AController* Player, TArray<ALyraPlayerStart*>& PlayerStarts) { return nullptr; }
+	virtual AActor* OnChoosePlayerStart(AController* Player, const TArray<ALyraPlayerStart*>& PlayerStarts) { return nullptr; } // const 추가 -> 블루프린트에서 입력 가능하도록 함
 	virtual void OnFinishRestartPlayer(AController* Player, const FRotator& StartRotation) { }
 
 	UFUNCTION(BlueprintImplementableEvent, meta=(DisplayName=OnFinishRestartPlayer))
