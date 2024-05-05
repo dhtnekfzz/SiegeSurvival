@@ -35,6 +35,7 @@ public:
 	ELyraPlayerStartLocationOccupancy GetLocationOccupancy(AController* const ControllerPawnToFit) const;
 
 	/** Did this player start get claimed by a controller already? */
+	UFUNCTION(BlueprintCallable) // 블루프린트 로직에서 LyraPlayerStart가 사용되었는지 확인하는 메서드 추가
 	bool IsClaimed() const;
 
 	/** If this PlayerStart was not claimed, claim it for ClaimingController */
