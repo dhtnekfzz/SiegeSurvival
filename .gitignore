@@ -3,7 +3,7 @@ DerivedDataCache
 Intermediate
 Saved
 Build
-
+Content
 
 .vs
 .vscode
@@ -13,14 +13,18 @@ Build
 *.opendb
 *.sdf
 *.sln
-*.suo
-*.xcodeproj
+.suo
+.xcodeproj
 .xcworkspace
 
-Content/
-!Content/SiegeSurvival
 
+!Content/
+Content/*
+!Content/SiegeSurvival/
+
+
+!Plugins/
 Plugins/*
-!Plugins/GameFeatures
+!Plugins/GameFeatures/
 Plugins/GameFeatures/*
-!Plugins/GameFeatures/SiegeSurvival
+!Plugins/GameFeatures/SiegeSurvival/
