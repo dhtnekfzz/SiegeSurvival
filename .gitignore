@@ -13,9 +13,9 @@ Content
 *.opendb
 *.sdf
 *.sln
-*.suo
-*.xcodeproj
-*.xcworkspace
+.suo
+.xcodeproj
+.xcworkspace
 
 
 !Content/
@@ -28,8 +28,3 @@ Plugins/*
 !Plugins/GameFeatures/
 Plugins/GameFeatures/*
 !Plugins/GameFeatures/SiegeSurvival/
-
-
-
-
-
