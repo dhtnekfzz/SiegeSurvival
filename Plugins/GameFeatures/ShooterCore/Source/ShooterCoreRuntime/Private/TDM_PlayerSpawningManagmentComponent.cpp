@@ -17,7 +17,7 @@ UTDM_PlayerSpawningManagmentComponent::UTDM_PlayerSpawningManagmentComponent(con
 {
 }
 
-AActor* UTDM_PlayerSpawningManagmentComponent::OnChoosePlayerStart(AController* Player, TArray<ALyraPlayerStart*>& PlayerStarts)
+/*AActor* UTDM_PlayerSpawningManagmentComponent::OnChoosePlayerStart(AController* Player, TArray<ALyraPlayerStart*>& PlayerStarts)
 {
 	ULyraTeamSubsystem* TeamSubsystem = GetWorld()->GetSubsystem<ULyraTeamSubsystem>();
 	if (!ensure(TeamSubsystem))
@@ -86,7 +86,7 @@ AActor* UTDM_PlayerSpawningManagmentComponent::OnChoosePlayerStart(AController* 
 	}
 
 	return FallbackPlayerStart;
-}
+}*/
 
 void UTDM_PlayerSpawningManagmentComponent::OnFinishRestartPlayer(AController* Player, const FRotator& StartRotation)
 {
