@@ -32,6 +32,10 @@ public:
 	virtual TOptional<FUIInputConfig> GetDesiredInputConfig() const override;
 	//~End of UCommonActivatableWidget interface
 
+	// 선택한 캐릭터의 폰 클래스를 설정한다.
+	UFUNCTION(BlueprintCallable, Category = "SS|Pawn")
+	void SetPawnClass(TSubclassOf<APawn> InPawnClass);
+
 #if WITH_EDITOR
 	virtual void ValidateCompiledWidgetTree(const UWidgetTree& BlueprintWidgetTree, class IWidgetCompilerLog& CompileLog) const override;
 #endif

@@ -29,6 +29,11 @@ TOptional<FUIInputConfig> ULyraActivatableWidget::GetDesiredInputConfig() const
 	}
 }
 
+void ULyraActivatableWidget::SetPawnClass(TSubclassOf<APawn> InPawnClass)
+{
+	
+}
+
 #if WITH_EDITOR
 
 void ULyraActivatableWidget::ValidateCompiledWidgetTree(const UWidgetTree& BlueprintWidgetTree, class IWidgetCompilerLog& CompileLog) const

@@ -12,3 +12,4 @@ ULyraPawnData::ULyraPawnData(const FObjectInitializer& ObjectInitializer)
 	DefaultCameraMode = nullptr;
 }
 
+

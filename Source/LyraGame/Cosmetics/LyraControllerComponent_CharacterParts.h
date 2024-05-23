@@ -77,6 +77,7 @@ public:
 	// Applies relevant developer settings if in PIE
 	void ApplyDeveloperSettings();
 
+
 protected:
 	UPROPERTY(EditAnywhere, Category=Cosmetics)
 	TArray<FLyraControllerCharacterPartEntry> CharacterParts;

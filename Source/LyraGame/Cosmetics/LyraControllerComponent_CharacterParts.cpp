@@ -5,6 +5,7 @@
 #include "Cosmetics/LyraPawnComponent_CharacterParts.h"
 #include "GameFramework/CheatManagerDefines.h"
 #include "LyraCosmeticDeveloperSettings.h"
+#include "Character/LyraPawnData.h"
 #include "GameFramework/Pawn.h"
 
 #include UE_INLINE_GENERATED_CPP_BY_NAME(LyraControllerComponent_CharacterParts)
@@ -161,6 +162,7 @@ void ULyraControllerComponent_CharacterParts::ApplyDeveloperSettings()
 }
 
 
+
 void ULyraControllerComponent_CharacterParts::AddCheatPart(const FLyraCharacterPart& NewPart, bool bSuppressNaturalParts)
 {
 #if UE_WITH_CHEAT_MANAGER
@@ -220,4 +222,5 @@ void ULyraControllerComponent_CharacterParts::SetSuppressionOnNaturalParts(bool 
 	}
 #endif
 }
+
 
