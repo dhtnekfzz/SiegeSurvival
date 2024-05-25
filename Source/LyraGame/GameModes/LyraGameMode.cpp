@@ -54,6 +54,27 @@ const ULyraPawnData* ALyraGameMode::GetPawnDataForController(const AController* 
 				return PawnData;
 			}
 		}
+		// 봇 생성 관련 로직 추가 (05.23)
+		const ALyraPlayerBotController* ai = Cast<ALyraPlayerBotController>(InController);
+		if (ai)
+		{
+			check(GameState);
+			ULyraExperienceManagerComponent* ExperienceComponent = GameState->FindComponentByClass<ULyraExperienceManagerComponent>();
+			check(ExperienceComponent);
+
+			if (ExperienceComponent->IsExperienceLoaded())
+			{
+				const ULyraExperienceDefinition* Experience = ExperienceComponent->GetCurrentExperienceChecked();
+				if (Experience->AIPawnData != nullptr)
+				{
+					UE_LOG(LogLyraExperience, Error, TEXT("AIPawnData"));
+					return Experience->AIPawnData;
+				}
+
+				// Experience is loaded and there's still no pawn data, fall back to the default for now
+				return ULyraAssetManager::Get().GetDefaultPawnData();
+			}
+		}
 	}
 
 	// If not, fall back to the the default for the current experience
