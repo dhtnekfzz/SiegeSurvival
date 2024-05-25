@@ -18,4 +18,3 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Lyra Blueprint Functions")
 	static void SpawnEnemy(UGameStateComponent* GameStateComponent, ALyraGameMode* GameMode, TSubclassOf<AAIController> BotControllerClass, int32 NumBots);
 };
-// int32 NumBots Ãß°¡
