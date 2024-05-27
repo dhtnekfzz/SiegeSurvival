@@ -17,6 +17,13 @@
 	"Installed": false,
 	"ExplicitlyLoaded": true,
 	"BuiltInInitialFeatureState": "Registered",
+	"Modules": [
+		{
+			"Name": "SiegeSurvivalRuntime",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
 	"Plugins": [
 		{
 			"Name": "GameplayAbilities",
@@ -63,5 +70,5 @@
 			"Enabled": true
 		}
 	],
-	"NoCode": true
+	"NoCode": false
 }

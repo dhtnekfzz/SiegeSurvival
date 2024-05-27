@@ -287,6 +287,10 @@
 			"Enabled": true
 		},
 		{
+			"Name": "SiegeSurvival",
+			"Enabled": true
+		},
+		{
 			"Name": "ShooterMaps",
 			"Enabled": true
 		},
@@ -300,10 +304,6 @@
 		},
 		{
 			"Name": "ShooterExplorer",
-			"Enabled": true
-		},
-		{
-			"Name": "ShooterTests",
 			"Enabled": true
 		},
 		{
@@ -334,6 +334,13 @@
 			"Name": "SkeletalMeshModelingTools",
 			"Enabled": true
 		}
+	],
+	"TargetPlatforms": [
+		"Windows",
+		"Android",
+		"IOS",
+		"Linux",
+		"Mac"
 	],
 	"EpicSampleNameHash": "451731683"
 }
