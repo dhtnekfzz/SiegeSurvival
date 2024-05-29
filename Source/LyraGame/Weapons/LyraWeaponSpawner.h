@@ -39,6 +39,10 @@ public:
 
 	void OnConstruction(const FTransform& Transform) override;
 
+	// 무기 스포너에 무기 랜덤 할당위해 SetWeaponDefinition 변수 추가하는 코드 설정(05.28)
+	UFUNCTION(BlueprintCallable, Category = "Lyra|WeaponPickup")
+	void SetWeaponDefinition(ULyraWeaponPickupDefinition* NewWeaponDefinition);
+
 protected:
 	//Data asset used to configure a Weapon Spawner
 	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "Lyra|WeaponPickup")

@@ -241,6 +241,13 @@ void ALyraWeaponSpawner::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& O
 	DOREPLIFETIME(ALyraWeaponSpawner, bIsWeaponAvailable);
 }
 
+// 무기 스포너에 무기 랜덤 할당위해 SetWeaponDefinition 변수 추가하는 코드 설정(05.28)
+void ALyraWeaponSpawner::SetWeaponDefinition(ULyraWeaponPickupDefinition* NewWeaponDefinition)
+{
+	WeaponDefinition = NewWeaponDefinition;
+	OnConstruction(GetTransform());  // Apply changes immediately if necessary
+}
+
 int32 ALyraWeaponSpawner::GetDefaultStatFromItemDef(const TSubclassOf<ULyraInventoryItemDefinition> WeaponItemClass, FGameplayTag StatTag)
 {
 	if (WeaponItemClass != nullptr)
