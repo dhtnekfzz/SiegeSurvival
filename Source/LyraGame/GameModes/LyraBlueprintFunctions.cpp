@@ -17,9 +17,46 @@
 #include "Character/LyraPawnExtensionComponent.h"
 #include "Player/LyraPlayerStart.h" // 헤더파일 추가 (05.25)
 #include "EngineUtils.h" // for TActorIterator (05.25)
+#include "TimerManager.h" // 타이머 매니저 추가 (05.31)
 
 
-// 봇 균등 생성 로직 추가 버전 코드 (05.25)
+
+// 봇을 순차적으로 생성하는 로직 추가 (05.31)
+void ULyraBlueprintFunctions::SpawnEnemyInternal(UGameStateComponent* GameStateComponent, ALyraGameMode* GameMode, TSubclassOf<AAIController> BotControllerClass, AActor* SelectedStart)
+{
+    UWorld* World = GameStateComponent->GetWorld();
+    if (!World)
+    {
+        return;
+    }
+
+    FActorSpawnParameters SpawnInfo;
+    SpawnInfo.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+    SpawnInfo.OverrideLevel = GameStateComponent->GetComponentLevel();
+    SpawnInfo.ObjectFlags |= RF_Transient;
+
+    FVector SpawnLocation = SelectedStart->GetActorLocation();
+    FRotator SpawnRotation = SelectedStart->GetActorRotation();
+
+    AAIController* NewController = World->SpawnActor<AAIController>(BotControllerClass, SpawnLocation, SpawnRotation, SpawnInfo);
+
+    if (NewController != nullptr)
+    {
+        check(GameMode);
+
+        GameMode->GenericPlayerInitialization(NewController);
+        GameMode->RestartPlayerAtPlayerStart(NewController, SelectedStart);
+
+        if (NewController->GetPawn() != nullptr)
+        {
+            if (ULyraPawnExtensionComponent* PawnExtComponent = NewController->GetPawn()->FindComponentByClass<ULyraPawnExtensionComponent>())
+            {
+                PawnExtComponent->CheckDefaultInitialization();
+            }
+        }
+    }
+}
+
 void ULyraBlueprintFunctions::SpawnEnemy(UGameStateComponent* GameStateComponent, ALyraGameMode* GameMode, TSubclassOf<AAIController> BotControllerClass, int32 NumBots)
 {
     // LyraPlayerStart 인스턴스 배열 가져오기
@@ -43,81 +80,27 @@ void ULyraBlueprintFunctions::SpawnEnemy(UGameStateComponent* GameStateComponent
         return;
     }
 
-    FActorSpawnParameters SpawnInfo;
-    SpawnInfo.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
-    SpawnInfo.OverrideLevel = GameStateComponent->GetComponentLevel();
-    SpawnInfo.ObjectFlags |= RF_Transient;
+    const float SpawnDelay = 1.0f; // 봇 생성 딜레이 (단위: 초)
+    int32 NumSpawnsPerCycle = MeleeTaggedStarts.Num();
+    int32 NumCycles = FMath::CeilToInt(static_cast<float>(NumBots) / NumSpawnsPerCycle);
 
-    // 인덱스를 사용해 순환하면서 봇을 생성
-    int32 PlayerStartIndex = 0;
-
-    for (int32 i = 0; i < NumBots; ++i)
+    for (int32 Cycle = 0; Cycle < NumCycles; ++Cycle)
     {
-        // 현재 인덱스에 해당하는 Melee 태그를 가진 PlayerStart를 선택
-        AActor* SelectedStart = MeleeTaggedStarts[PlayerStartIndex];
-        FVector SpawnLocation = SelectedStart->GetActorLocation();
-        FRotator SpawnRotation = SelectedStart->GetActorRotation();
-
-        // 봇 생성
-        AAIController* NewController = GameStateComponent->GetWorld()->SpawnActor<AAIController>(BotControllerClass,
-            SpawnLocation, SpawnRotation, SpawnInfo);
-
-        if (NewController != nullptr)
+        for (int32 i = 0; i < NumSpawnsPerCycle; ++i)
         {
-            check(GameMode);
-
-            GameMode->GenericPlayerInitialization(NewController);
-            GameMode->RestartPlayerAtPlayerStart(NewController, SelectedStart);
-
-            if (NewController->GetPawn() != nullptr)
+            int32 BotIndex = Cycle * NumSpawnsPerCycle + i;
+            if (BotIndex >= NumBots)
             {
-                if (ULyraPawnExtensionComponent* PawnExtComponent = NewController->GetPawn()->FindComponentByClass<ULyraPawnExtensionComponent>())
-                {
-                    PawnExtComponent->CheckDefaultInitialization();
-                }
+                return;
             }
-        }
 
-        // 다음 MeleeTaggedStarts 인덱스로 이동 (순환)
-        PlayerStartIndex = (PlayerStartIndex + 1) % MeleeTaggedStarts.Num();
+            AActor* SelectedStart = MeleeTaggedStarts[i];
+            FTimerHandle TimerHandle;
+            FTimerDelegate TimerDel;
+            TimerDel.BindStatic(&ULyraBlueprintFunctions::SpawnEnemyInternal, GameStateComponent, GameMode, BotControllerClass, SelectedStart);
+
+            // 봇을 순차적으로 생성하기 위해 타이머 설정
+            GameStateComponent->GetWorld()->GetTimerManager().SetTimer(TimerHandle, TimerDel, SpawnDelay * (Cycle + 1), false);
+        }
     }
 }
-
-
-
-
-
-
-
-// 봇 균등 생성 로직 추가 전 기존 로직(05.25)
-// 아래 int32 NumBots 추가
-//void ULyraBlueprintFunctions::SpawnEnemy(UGameStateComponent* GameStateComponent, ALyraGameMode* GameMode, TSubclassOf<AAIController> BotControllerClass, int32 NumBots)
-//{
-//	FActorSpawnParameters SpawnInfo;
-//	SpawnInfo.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
-//	SpawnInfo.OverrideLevel = GameStateComponent->GetComponentLevel();
-//	SpawnInfo.ObjectFlags |= RF_Transient;
-//
-//	// for문 추가
-//	for (int32 i = 0; i < NumBots; ++i)
-//	{
-//		AAIController* NewController = GameStateComponent->GetWorld()->SpawnActor<AAIController>(BotControllerClass,
-//			FVector::ZeroVector, FRotator::ZeroRotator, SpawnInfo);
-//
-//		if (NewController != nullptr)
-//		{
-//			check(GameMode);
-//
-//			GameMode->GenericPlayerInitialization(NewController);
-//			GameMode->RestartPlayer(NewController);
-//
-//			if (NewController->GetPawn() != nullptr)
-//			{
-//				if (ULyraPawnExtensionComponent* PawnExtComponent = NewController->GetPawn()->FindComponentByClass<ULyraPawnExtensionComponent>())
-//				{
-//					PawnExtComponent->CheckDefaultInitialization();
-//				}
-//			}
-//		}
-//	}
-//}
