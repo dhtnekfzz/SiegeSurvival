@@ -52,7 +52,7 @@ void ASSWeaponBase::BeginPlay()
 				WeaponMesh_1p->SetOwnerNoSee(true);
 				WeaponMesh_3p->SetOwnerNoSee(false);
 			}
-
+			
 		}
 	}
 }
