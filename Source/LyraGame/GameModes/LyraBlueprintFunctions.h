@@ -17,5 +17,8 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Lyra Blueprint Functions")
 	static void SpawnEnemy(UGameStateComponent* GameStateComponent, ALyraGameMode* GameMode, TSubclassOf<AAIController> BotControllerClass, int32 NumBots);
+
+	// 봇 순차생성을 위해 SpawnEnemyInternal 함수를 UFUNCTION으로 선언 (05.31)
+	UFUNCTION()
+	static void SpawnEnemyInternal(UGameStateComponent* GameStateComponent, ALyraGameMode* GameMode, TSubclassOf<AAIController> BotControllerClass, AActor* SelectedStart);
 };
-// int32 NumBots 추가
