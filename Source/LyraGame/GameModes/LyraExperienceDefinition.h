@@ -44,9 +44,13 @@ public:
 
 	/** The default pawn class to spawn for players */
 	//@TODO: Make soft?
-	// 봇(AI) 폰 데이터 추가하는 로직 추가
+	// 밀리봇(AI) 폰 데이터 추가하는 로직 추가
 	UPROPERTY(EditDefaultsOnly, Category = Gameplay)
-	TObjectPtr<const ULyraPawnData> AIPawnData;
+	TObjectPtr<const ULyraPawnData> AIMeleePawnData;
+
+	// 슈터봇(AI) 폰 데이터 추가하는 로직 추가(06.07)
+	UPROPERTY(EditDefaultsOnly, Category = Gameplay)
+	TObjectPtr<const ULyraPawnData> AIShooterPawnData;
 
 	// List of actions to perform as this experience is loaded/activated/deactivated/unloaded
 	UPROPERTY(EditDefaultsOnly, Instanced, Category="Actions")
