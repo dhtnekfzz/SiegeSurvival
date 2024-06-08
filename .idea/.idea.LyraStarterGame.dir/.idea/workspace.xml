@@ -8,37 +8,58 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9bd640df-5aa9-406c-b993-6f677dd56f48" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LyraStarterGame.dir/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LyraStarterGame.dir/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LyraStarterGame.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LyraStarterGame.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Config/DefaultGame.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGame.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SiegeSurvival/Character/Heroes/B_Hero_Default_SS.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SiegeSurvival/Character/Heroes/B_Hero_Default_SS.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SiegeSurvival/SSH/Abilities/GA_Hero_Death_Check.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SiegeSurvival/SSH/Abilities/GA_Hero_Death_Check.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SiegeSurvival/SSH/Blueprint/B_AbilitySpawner.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SiegeSurvival/SSH/Blueprint/B_AbilitySpawner.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SiegeSurvival/SSH/Blueprint/B_WeaponSpawner_Check.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SiegeSurvival/SSH/Blueprint/B_WeaponSpawner_Check.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SiegeSurvival/SSH/Bot/B_AI_Controller_LyraMelee_Grux_Check.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SiegeSurvival/SSH/Bot/B_AI_Controller_LyraMelee_Grux_Check.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SiegeSurvival/SSH/Cosmetics/B_Grux_Check.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SiegeSurvival/SSH/Cosmetics/B_Grux_Check.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SiegeSurvival/SSH/ExperienceFile/B_Hero_Default_Bot_Check.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SiegeSurvival/SSH/ExperienceFile/B_Hero_Default_Bot_Check.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/SiegeSurvival/SSH/ExperienceFile/B_Hero_ShooterMannequin_Bot_Check.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SiegeSurvival/SSH/ExperienceFile/B_Hero_ShooterMannequin_Bot_Check.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/SiegeSurvival/SSH/ExperienceFile/B_PickRandomCharacter_Check.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SiegeSurvival/SSH/ExperienceFile/B_PickRandomCharacter_Check.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/SiegeSurvival/SSH/ExperienceFile/B_TeamDeathMatchScoring_Check.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SiegeSurvival/SSH/ExperienceFile/B_TeamDeathMatchScoring_Check.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/SiegeSurvival/SSH/ExperienceFile/B_TeamSpawningRules_Check.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SiegeSurvival/SSH/ExperienceFile/B_TeamSpawningRules_Check.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/SiegeSurvival/Weapons/B_Weapon_SS.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SiegeSurvival/Weapons/B_Weapon_SS.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Characters/Cosmetics/B_PickCharacter_Shinbi.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Characters/Heroes/Phase/Meshes/FPArms/Phase_SS_FP_Skeleton.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Characters/Heroes/Phase/Meshes/FPArms/Phase_SS_FP_Skeleton.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SiegeSurvival/SSH/ExperienceFile/CheckMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SiegeSurvival/SSH/ExperienceFile/CheckMap.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SiegeSurvival/SSH/ExperienceFile/SSGameMode_Check.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SiegeSurvival/SSH/ExperienceFile/SSGameMode_Check.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SiegeSurvival/SSH/ExperienceFile/SiegeSurvival_GameMode_Check.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SiegeSurvival/SSH/ExperienceFile/SiegeSurvival_GameMode_Check.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SiegeSurvival/SSH/ExperienceFile/StageText_Check.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SiegeSurvival/SSH/ExperienceFile/StageText_Check.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SiegeSurvival/SSH/ExperienceFile/W_ShooterHUDLayout_Check.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SiegeSurvival/SSH/ExperienceFile/W_ShooterHUDLayout_Check.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SiegeSurvival/SSH/Game/Melee/GA_Melee_Grux_Check.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SiegeSurvival/SSH/Game/Melee/GA_Melee_Grux_Check.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SiegeSurvival/SSH/Grux/Meshes/Grux.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SiegeSurvival/SSH/Grux/Meshes/Grux.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Characters/Cosmetics/B_AGPickRandomCharacter1.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Characters/Cosmetics/B_CharacterIndex.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Characters/Cosmetics/B_PickCharacter.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Characters/Cosmetics/B_PickCharacter_Phase.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Characters/Cosmetics/B_PickCharacter_Phase.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Characters/Cosmetics/B_PickCharacter_Revenant.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Characters/Cosmetics/B_PickCharacter_Revenant.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Characters/Cosmetics/SS_CosmeticList.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Characters/Cosmetics/STR_CosmeticList1.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Characters/Heroes/Retarget/RTG_UE5Manny_Revenant.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Characters/Heroes/Retarget/RTG_UE5Manny_Revenant.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Experiences/B_SiegeSurvivalExperience_Gideon.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Experiences/B_SiegeSurvivalExperience_Gideon.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Experiences/B_SiegeSurvivalExperience_Phase.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Experiences/B_SiegeSurvivalExperience_Phase.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Experiences/B_SiegeSurvivalExperience_Revenant.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Experiences/B_SiegeSurvivalExperience_Revenant.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Input/Abilities/GA_ChangePOV.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Input/Abilities/GA_ChangePOV.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Experiences/SSAS_ShooterGame_StandardHUD.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Experiences/SSAS_ShooterGame_StandardHUD.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Game/AbilitySet_Hero_SiegeSurvival.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Game/AbilitySet_Hero_SiegeSurvival.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Game/AbilitySet_Hero_SiegeSurvival_Phase.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Game/AbilitySet_Hero_SiegeSurvival_Phase.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Game/AbilitySet_Hero_SiegeSurvival_Revenant.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Game/AbilitySet_Hero_SiegeSurvival_Revenant.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Game/B_Hero_SiegeSurvival_Gideon.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Game/B_Hero_SiegeSurvival_Gideon.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Game/HeroData_SiegeSurvival_Phase.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Game/HeroData_SiegeSurvival_Phase.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Input/Abilities/Skill/Gideon/B_Gideon_Projectile.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Input/Abilities/Skill/Gideon/B_Gideon_Projectile.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Input/Abilities/Skill/Gideon/GA_Skill_Gideon.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Input/Abilities/Skill/Gideon/GA_Skill_Gideon.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Input/Abilities/Skill/Phase/GA_Skill_Phase.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Input/Abilities/Skill/Phase/GA_Skill_Phase.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Input/Abilities/Skill/Revenant/B_Revenant_Projectile.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Input/Abilities/Skill/Revenant/B_Revenant_Projectile.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Input/Abilities/Skill/Revenant/GA_Skill_Revenant.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Input/Abilities/Skill/Revenant/GA_Skill_Revenant.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Input/Abilities/Skill/Revenant/GE_Skill_Revenant.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Input/Abilities/Skill/Revenant/GE_Skill_Revenant.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Maps/L_SiegeSurvivalMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Maps/L_SiegeSurvivalMap.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/UI/B_SSFrontendStateComponent.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/UI/B_SSFrontendStateComponent.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/UI/FrontEnd/W_SSFrontEndHUDLayout.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/UI/FrontEnd/W_SSFrontEndHUDLayout.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/UI/Hud/W_SiegeSurvivalHUDLayout.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/UI/Hud/W_SiegeSurvivalHUDLayout.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/UI/Menu/W_CharacterSelectionScreen.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/UI/Menu/W_CharacterSelectionScreen.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Weapons/Pistol/Lv1/B_Pistol_SS.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Weapons/Pistol/Lv1/B_Pistol_SS.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Weapons/Pistol/Lv2/B_PistolLv2_SS.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Weapons/Pistol/Lv2/B_PistolLv2_SS.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Weapons/Pistol/Lv3/B_PistolLv3_SS.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Weapons/Pistol/Lv3/B_PistolLv3_SS.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Weapons/Pistol/Mesh/SK_Pistol_Skeleton.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Weapons/Rifle/Lv1/B_RIfle_SS.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Weapons/Rifle/Lv1/B_RIfle_SS.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/UI/Menu/W_SSFrontEnd.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/UI/Menu/W_SSFrontEnd.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Weapons/GA_Weapon_Fire_SS.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Weapons/GA_Weapon_Fire_SS.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Weapons/Pistol/GA_Weapon_Reload_Pistol_SS.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Weapons/Pistol/GA_Weapon_Reload_Pistol_SS.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Weapons/Pistol/Lv1/ID_Pistol_SS.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Weapons/Pistol/Lv1/ID_Pistol_SS.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Weapons/Rifle/Lv2/B_RIfleLv2_SS.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Weapons/Rifle/Lv2/B_RIfleLv2_SS.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Weapons/Rifle/Lv3/B_RIfleLv3_SS.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Weapons/Rifle/Lv3/B_RIfleLv3_SS.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Weapons/Shotgun/Lv1/B_Shotgun_SS.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Weapons/Shotgun/Lv1/B_Shotgun_SS.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Weapons/Shotgun/Lv2/B_ShotgunLv2_SS.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Weapons/Shotgun/Lv2/B_ShotgunLv2_SS.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Weapons/Shotgun/Lv3/B_ShotgunLv3_SS.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GameFeatures/SiegeSurvival/SiegeSurvival/Content/Weapons/Shotgun/Lv3/B_ShotgunLv3_SS.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/LyraGame/Private/Weapons/SSWeaponBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/LyraGame/Private/Weapons/SSWeaponBase.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,317 +70,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
@@ -402,28 +112,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Uproject.LyraStarterGame.executor": "Debug",
-    "git-widget-placeholder": "Sub",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "CodeLensConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Uproject.LyraStarterGame.executor&quot;: &quot;Debug&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Sub&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CodeLensConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\USER\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\USER\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\USER\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\USER\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\USER\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\USER\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CidrLocalAttachDebugger.recentlyUsed">
       <recent name="com.jetbrains.rider.cpp.debugger.RiderCppLLDBDriverConfiguration" />
@@ -585,6 +295,8 @@
       <workItem from="1716653429120" duration="10432000" />
       <workItem from="1716704841829" duration="376000" />
       <workItem from="1716705258791" duration="31813000" />
+      <workItem from="1717490758426" duration="10958000" />
+      <workItem from="1717746706102" duration="9353000" />
     </task>
     <servers />
   </component>
