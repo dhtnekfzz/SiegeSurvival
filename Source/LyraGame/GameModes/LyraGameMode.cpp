@@ -65,14 +65,39 @@ const ULyraPawnData* ALyraGameMode::GetPawnDataForController(const AController* 
 			if (ExperienceComponent->IsExperienceLoaded())
 			{
 				const ULyraExperienceDefinition* Experience = ExperienceComponent->GetCurrentExperienceChecked();
-				if (Experience->AIPawnData != nullptr)
+				
+				// 슈터봇 폰 데이터 추가 위한 로직 추가(06.07)
+				// 봇 타입에 따라 적절한 Pawn Data 반환
+				switch (ai->GetBotType())
 				{
-					UE_LOG(LogLyraExperience, Error, TEXT("AIPawnData"));
-					return Experience->AIPawnData;
-				}
+				case EBotType::Shooter:
+					if (Experience->AIShooterPawnData != nullptr)
+					{
+						UE_LOG(LogLyraExperience, Error, TEXT("AIShooterPawnData"));
+						return Experience->AIShooterPawnData;
+					}
+					break;
 
-				// Experience is loaded and there's still no pawn data, fall back to the default for now
-				return ULyraAssetManager::Get().GetDefaultPawnData();
+				case EBotType::Melee:
+					if (Experience->AIMeleePawnData != nullptr)
+					{
+						UE_LOG(LogLyraExperience, Error, TEXT("AIMeleePawnData"));
+						return Experience->AIMeleePawnData;
+					}
+					break;
+
+				default:
+					return ULyraAssetManager::Get().GetDefaultPawnData();
+				}
+				// 기존 로직(06.07)
+				//if (Experience->AIPawnData != nullptr)
+				//{
+				//	UE_LOG(LogLyraExperience, Error, TEXT("AIPawnData"));
+				//	return Experience->AIPawnData;
+				//}
+
+				//// Experience is loaded and there's still no pawn data, fall back to the default for now
+				//return ULyraAssetManager::Get().GetDefaultPawnData();
 			}
 		}
 	}
