@@ -32,7 +32,7 @@ ASSCharacter::ASSCharacter(const FObjectInitializer& ObjectInitializer)
 	NewWeaponExp.EXPThresholds.Add(0.0f);
 	NewWeaponExp.EXPThresholds.Add(200.0f);
 	NewWeaponExp.EXPThresholds.Add(300.0f);
-	NewWeaponExp.EXPThresholds.Add(400.0f);
+	// NewWeaponExp.EXPThresholds.Add(400.0f);
 	WeaponExp.Add(EWeaponType::Pistol, NewWeaponExp);
 
 	// static ConstructorHelpers::FClassFinder<ULyraInventoryItemDefinition> WeaponItemClass(TEXT("/Script/Engine.Blueprint'/Game/Weapons/Pistol/ID_Pistol_SSLv2.ID_Pistol_SSLv2'"));
@@ -82,10 +82,11 @@ void ASSCharacter::SetIsFirstPerson()
 
 void ASSCharacter::CheckLevelUp(EWeaponType WeaponType)
 {
-	if(!WeaponExp[WeaponType].EXPThresholds[WeaponExp[WeaponType].WeaponLevel]) return;
+	if(WeaponExp[WeaponType].WeaponLevel==3) return;
+	// if(!WeaponExp[WeaponType].EXPThresholds[WeaponExp[WeaponType].WeaponLevel]) return;
 
 	if(WeaponExp[WeaponType].CurrentEXP>=WeaponExp[WeaponType].EXPThresholds[WeaponExp[WeaponType].WeaponLevel]
-	&& WeaponExp[WeaponType].WeaponLevel<WeaponExp[WeaponType].EXPThresholds.Num()-1)
+	&& WeaponExp[WeaponType].WeaponLevel<WeaponExp[WeaponType].EXPThresholds.Num())
 	{
 		WeaponExp[WeaponType].CurrentEXP-=WeaponExp[WeaponType].EXPThresholds[WeaponExp[WeaponType].WeaponLevel];
 		WeaponExp[WeaponType].WeaponLevel++;
@@ -114,8 +115,10 @@ void ASSCharacter::OnLevelUp(EWeaponType WeaponType, int32 Level)
 void ASSCharacter::AddEXP(EWeaponType WeaponType, float EXP)
 {
 	// Add EXP
+	if(WeaponType== EWeaponType::Healing) return;
 	if(WeaponExp.Contains(WeaponType))
 	{
+		
 		WeaponExp[WeaponType].CurrentEXP+=EXP;
 	}
 	else
@@ -124,7 +127,7 @@ void ASSCharacter::AddEXP(EWeaponType WeaponType, float EXP)
 		NewWeaponExp.EXPThresholds.Add(0.0f);
 		NewWeaponExp.EXPThresholds.Add(200.0f);
 		NewWeaponExp.EXPThresholds.Add(300.0f);
-		NewWeaponExp.EXPThresholds.Add(400.0f);
+		// NewWeaponExp.EXPThresholds.Add(400.0f);
 		WeaponExp.Add(WeaponType, NewWeaponExp);
 
 

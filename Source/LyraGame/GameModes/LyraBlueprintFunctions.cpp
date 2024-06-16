@@ -80,7 +80,7 @@ void ULyraBlueprintFunctions::SpawnEnemy(UGameStateComponent* GameStateComponent
         return;
     }
 
-    const float SpawnDelay = 2.0f; // 봇 생성 딜레이 (단위: 초)
+    const float SpawnDelay = 3.0f; // 봇 생성 딜레이 (단위: 초)
     int32 NumSpawnsPerCycle = MeleeTaggedStarts.Num();
     int32 NumCycles = FMath::CeilToInt(static_cast<float>(NumBots) / NumSpawnsPerCycle);
 

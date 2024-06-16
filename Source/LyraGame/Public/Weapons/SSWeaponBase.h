@@ -12,6 +12,7 @@ enum class EWeaponType : uint8
 	Pistol UMETA(DisplayName = "Pistol"),
 	Rifle UMETA(DisplayName = "Rifle"),
 	Shotgun UMETA(DisplayName = "Shotgun"),
+	Healing UMETA(DisplayName = "Healing"),
 };
 
 
