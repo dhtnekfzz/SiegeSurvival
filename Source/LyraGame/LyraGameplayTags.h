@@ -57,4 +57,12 @@ namespace LyraGameplayTags
 	LYRAGAME_API	UE_DECLARE_GAMEPLAY_TAG_EXTERN(Movement_Mode_Flying);
 
 	LYRAGAME_API	UE_DECLARE_GAMEPLAY_TAG_EXTERN(Movement_Mode_Custom);
+
+
+	// SiegeSurvival Tags
+	LYRAGAME_API	UE_DECLARE_GAMEPLAY_TAG_EXTERN(CombatSocket_Weapon);
+	LYRAGAME_API	UE_DECLARE_GAMEPLAY_TAG_EXTERN(CombatSocket_RightHand);
+	LYRAGAME_API	UE_DECLARE_GAMEPLAY_TAG_EXTERN(CombatSocket_LeftHand);
+	
+	
 };

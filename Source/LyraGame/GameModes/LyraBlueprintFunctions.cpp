@@ -24,7 +24,9 @@
 // 봇을 순차적으로 생성하는 로직 추가 (05.31)
 void ULyraBlueprintFunctions::SpawnEnemyInternal(UGameStateComponent* GameStateComponent, ALyraGameMode* GameMode, TSubclassOf<AAIController> BotControllerClass, AActor* SelectedStart)
 {
-    UWorld* World = GameStateComponent->GetWorld();
+    if (!GameMode || !GameStateComponent || !SelectedStart) return;
+    UWorld* World= GameStateComponent->GetWorld();
+    if (!World || World->bIsTearingDown) return;
     if (!World)
     {
         return;
@@ -100,6 +102,7 @@ void ULyraBlueprintFunctions::SpawnEnemy(UGameStateComponent* GameStateComponent
             TimerDel.BindStatic(&ULyraBlueprintFunctions::SpawnEnemyInternal, GameStateComponent, GameMode, BotControllerClass, SelectedStart);
 
             // 봇을 순차적으로 생성하기 위해 타이머 설정
+            if(!GameMode) return;
             GameStateComponent->GetWorld()->GetTimerManager().SetTimer(TimerHandle, TimerDel, SpawnDelay * (Cycle + 1), false);
         }
     }

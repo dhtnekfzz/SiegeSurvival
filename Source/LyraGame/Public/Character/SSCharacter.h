@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Character/LyraCharacter.h"
+#include "Interaction/CombatInterface.h"
 #include "SSCharacter.generated.h"
 
 class ULyraInventoryItemDefinition;
@@ -47,7 +48,7 @@ public:
 };
 
 UCLASS()
-class LYRAGAME_API ASSCharacter : public ALyraCharacter
+class LYRAGAME_API ASSCharacter : public ALyraCharacter, public ICombatInterface
 {
 	GENERATED_BODY()
 	
@@ -93,7 +94,11 @@ public:
 
 	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, BlueprintPure=false, Category = "Weapon|Level")
 	bool WeaponLevelUp(TSubclassOf<ULyraInventoryItemDefinition> WeaponItemClass, APawn* ReceivingPawn, EWeaponType WeaponType);
+
+	/* Combat Interface*/
+	virtual FVector GetCombatSocketLocation_Implementation(const FGameplayTag& MontageTag) override;
 	
+		
 public:
 	//Weapon
 	UPROPERTY()
@@ -110,9 +115,18 @@ public:
 
 	UPROPERTY(EditAnywhere,  Category="Weapon|Level")
 	TObjectPtr<UDataTable> WeaponItemTable;
+
+	UPROPERTY(EditAnywhere, Category="Combat")
+	FName WeaponTipSocketName;
+	
+	UPROPERTY(EditAnywhere, Category="Combat")
+	FName RightHandSocketName;
+
+	UPROPERTY(EditAnywhere, Category="Combat")
+	FName LeftHandSocketName;
+	
 	
 private:
-
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "SS|Character", meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<USkeletalMeshComponent> Mesh1p;
 	

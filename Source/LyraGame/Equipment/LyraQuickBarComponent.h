@@ -54,7 +54,7 @@ public:
 
 	virtual void BeginPlay() override;
 
-	// SS: Added for the level up system
+	// SiegeSurvival: 레벨업한 무기를 슬롯에 추가하는 함수
 	UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly)
 	void AddLevelUpWeaponToSlot(EWeaponType WeaponType, ULyraInventoryItemInstance* Item);
 

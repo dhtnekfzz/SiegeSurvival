@@ -95,5 +95,11 @@ namespace LyraGameplayTags
 
 		return Tag;
 	}
+
+	// SiegeSurvival Tags
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(CombatSocket_Weapon, "CombatSocket.Weapon", "Weapon");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(CombatSocket_RightHand, "CombatSocket.RightHand", "RightHand");
+	UE_DEFINE_GAMEPLAY_TAG_COMMENT(CombatSocket_LeftHand, "CombatSocket.LeftHand", "LeftHand");
+	
 }
 

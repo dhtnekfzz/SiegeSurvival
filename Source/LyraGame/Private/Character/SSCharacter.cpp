@@ -3,6 +3,7 @@
 
 #include "Character/SSCharacter.h"
 
+#include "LyraGameplayTags.h"
 #include "Inventory/LyraInventoryItemDefinition.h"
 #include "UObject/ConstructorHelpers.h"
 #include "Animation/LyraAnimInstance.h"
@@ -92,8 +93,6 @@ void ASSCharacter::CheckLevelUp(EWeaponType WeaponType)
 		WeaponExp[WeaponType].WeaponLevel++;
 		OnLevelUp(WeaponType, WeaponExp[WeaponType].WeaponLevel);
 	}
-
-	return;
 }
 
 void ASSCharacter::OnLevelUp(EWeaponType WeaponType, int32 Level)
@@ -108,9 +107,7 @@ void ASSCharacter::OnLevelUp(EWeaponType WeaponType, int32 Level)
 			break;
 		}
 	}
-
 }
-
 
 void ASSCharacter::AddEXP(EWeaponType WeaponType, float EXP)
 {
@@ -118,7 +115,6 @@ void ASSCharacter::AddEXP(EWeaponType WeaponType, float EXP)
 	if(WeaponType== EWeaponType::Healing) return;
 	if(WeaponExp.Contains(WeaponType))
 	{
-		
 		WeaponExp[WeaponType].CurrentEXP+=EXP;
 	}
 	else
@@ -129,8 +125,6 @@ void ASSCharacter::AddEXP(EWeaponType WeaponType, float EXP)
 		NewWeaponExp.EXPThresholds.Add(300.0f);
 		// NewWeaponExp.EXPThresholds.Add(400.0f);
 		WeaponExp.Add(WeaponType, NewWeaponExp);
-
-
 	}
 	CheckLevelUp(WeaponType);
 }
@@ -138,4 +132,24 @@ void ASSCharacter::AddEXP(EWeaponType WeaponType, float EXP)
 float ASSCharacter::GetWeaponExp(EWeaponType WeaponType) const
 {
 	return WeaponExp.Contains(WeaponType) ? WeaponExp[WeaponType].CurrentEXP : 0.0f;
+}
+
+FVector ASSCharacter::GetCombatSocketLocation_Implementation(const FGameplayTag& MontageTag)
+{
+	
+	if(MontageTag.MatchesTagExact(LyraGameplayTags::CombatSocket_Weapon)&IsValid(CurrentWeapon))
+	{
+		return CurrentWeapon->GetWeaponMesh3P()->GetSocketLocation(WeaponTipSocketName);
+	}
+	if(MontageTag.MatchesTagExact(LyraGameplayTags::CombatSocket_RightHand))
+	{
+		return GetMesh()->GetSocketLocation(RightHandSocketName);
+		
+	}
+	if(MontageTag.MatchesTagExact(LyraGameplayTags::CombatSocket_LeftHand))
+	{
+		return GetMesh()->GetSocketLocation(LeftHandSocketName);
+	}
+
+	return FVector();
 }
