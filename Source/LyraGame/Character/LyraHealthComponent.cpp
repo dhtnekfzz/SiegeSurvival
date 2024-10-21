@@ -2,6 +2,7 @@
 
 #include "Character/LyraHealthComponent.h"
 
+#include "public/AbilitySystem/SSAttributeSet.h"
 #include "AbilitySystem/Attributes/LyraAttributeSet.h"
 #include "LyraLogChannels.h"
 #include "System/LyraAssetManager.h"
@@ -73,6 +74,9 @@ void ULyraHealthComponent::InitializeWithAbilitySystem(ULyraAbilitySystemCompone
 		UE_LOG(LogLyra, Error, TEXT("LyraHealthComponent: Cannot initialize health component for owner [%s] with NULL health set on the ability system."), *GetNameSafe(Owner));
 		return;
 	}
+
+	// SS
+	XPSet= AbilitySystemComponent->GetSet<USSAttributeSet>();
 
 	// Register to listen for attribute changes.
 	HealthSet->OnHealthChanged.AddUObject(this, &ThisClass::HandleHealthChanged);

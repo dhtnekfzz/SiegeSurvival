@@ -6,6 +6,8 @@
 
 #include "LyraHUD.generated.h"
 
+class UMVVM_WeaponXP;
+
 namespace EEndPlayReason { enum Type : int; }
 
 class AActor;
@@ -26,6 +28,12 @@ class ALyraHUD : public AHUD
 
 public:
 	ALyraHUD(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
+	
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<UMVVM_WeaponXP> WeaponXPViewModelClass;
+
+	UPROPERTY(BlueprintReadOnly)
+	TObjectPtr<UMVVM_WeaponXP> WeaponXPViewModel;
 
 protected:
 

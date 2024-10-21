@@ -144,6 +144,7 @@ void ALyraWeaponSpawner::AttemptPickUpWeapon_Implementation(APawn* Pawn)
 				if(ASSCharacter* Character = Cast<ASSCharacter>(Pawn))
 				{
 					Character->AddEXP( WeaponType, 100.0f);
+					Character->ApplyXP(WeaponType);
 				}
 			}
 		}		

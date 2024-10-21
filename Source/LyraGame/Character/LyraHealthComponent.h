@@ -6,6 +6,7 @@
 
 #include "LyraHealthComponent.generated.h"
 
+class USSAttributeSet;
 class ULyraHealthComponent;
 
 class ULyraAbilitySystemComponent;
@@ -127,6 +128,10 @@ protected:
 	// Health set used by this component.
 	UPROPERTY()
 	TObjectPtr<const ULyraHealthSet> HealthSet;
+
+	// SS
+	UPROPERTY()
+	TObjectPtr<const USSAttributeSet> XPSet;
 
 	// Replicated state used to handle dying.
 	UPROPERTY(ReplicatedUsing = OnRep_DeathState)

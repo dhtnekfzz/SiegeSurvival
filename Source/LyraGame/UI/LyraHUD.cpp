@@ -7,6 +7,7 @@
 #include "Async/TaskGraphInterfaces.h"
 #include "Components/GameFrameworkComponentManager.h"
 #include "UObject/UObjectIterator.h"
+#include "UI/ViewModel/MVVM_WeaponXP.h"
 
 #include UE_INLINE_GENERATED_CPP_BY_NAME(LyraHUD)
 
@@ -33,6 +34,9 @@ void ALyraHUD::BeginPlay()
 {
 	UGameFrameworkComponentManager::SendGameFrameworkComponentExtensionEvent(this, UGameFrameworkComponentManager::NAME_GameActorReady);
 
+	/*WeaponXPViewModel=NewObject<UMVVM_WeaponXP>(this, WeaponXPViewModelClass);
+	WeaponXPViewModel->Initialize();*/
+	
 	Super::BeginPlay();
 }
 

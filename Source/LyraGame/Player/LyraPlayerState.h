@@ -157,6 +157,10 @@ private:
 	UPROPERTY()
 	TObjectPtr<const class ULyraCombatSet> CombatSet;
 
+	// SS: SSAttributeSet used by this actor.
+	UPROPERTY()
+	TObjectPtr<const class USSAttributeSet> XPSet;
+
 	UPROPERTY(Replicated)
 	ELyraPlayerConnectionType MyPlayerConnectionType;
 

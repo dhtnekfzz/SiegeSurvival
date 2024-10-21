@@ -10,6 +10,7 @@
 #include "GameFramework/Pawn.h"
 #include "Inventory/InventoryFragment_EquippableItem.h"
 #include "NativeGameplayTags.h"
+#include "Character/SSCharacter.h"
 #include "Net/UnrealNetwork.h"
 
 #include UE_INLINE_GENERATED_CPP_BY_NAME(LyraQuickBarComponent)
@@ -137,6 +138,7 @@ ULyraEquipmentManagerComponent* ULyraQuickBarComponent::FindEquipmentManager() c
 
 void ULyraQuickBarComponent::SetActiveSlotIndex_Implementation(int32 NewIndex)
 {
+	
 	if (Slots.IsValidIndex(NewIndex) && (ActiveSlotIndex != NewIndex))
 	{
 		UnequipItemInSlot();
@@ -146,6 +148,21 @@ void ULyraQuickBarComponent::SetActiveSlotIndex_Implementation(int32 NewIndex)
 		EquipItemInSlot();
 
 		OnRep_ActiveSlotIndex();
+
+		// SS 
+		TSubclassOf<ULyraInventoryItemDefinition> ItemClass=Slots[NewIndex]->GetItemDef();
+		ULyraInventoryItemDefinition* SlotItemDef = ItemClass->GetDefaultObject<ULyraInventoryItemDefinition>();
+		if (AController* OwnerController = Cast<AController>(GetOwner()))
+		{
+			if (ASSCharacter* Character = Cast<ASSCharacter>(OwnerController->GetPawn()))
+			{
+				if(Character->WeaponXP.Contains(SlotItemDef->GetWeaponType()))
+				{
+					Character->OnXPChangedDelegate.Broadcast(Character->WeaponXP[SlotItemDef->GetWeaponType()]);
+					Character->OnLevelChangedDelegate.Broadcast(Character->WeaponLevel[SlotItemDef->GetWeaponType()]);
+				}
+			}
+		}
 	}
 }
 
@@ -177,6 +194,7 @@ void ULyraQuickBarComponent::AddItemToSlot(int32 SlotIndex, ULyraInventoryItemIn
 		{
 			Slots[SlotIndex] = Item;
 			OnRep_Slots();
+			
 		}
 	
 	}

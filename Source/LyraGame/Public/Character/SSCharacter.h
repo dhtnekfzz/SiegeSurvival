@@ -7,9 +7,14 @@
 #include "Interaction/CombatInterface.h"
 #include "SSCharacter.generated.h"
 
+class UMVVM_WeaponXP;
+class ULevelUpInfo;
 class ULyraInventoryItemDefinition;
 enum class EWeaponType : uint8;
 class ULyraCameraComponent;
+
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnPlayerStatChanged, int32, NewValue);
+
 /**
  * 
  */
@@ -55,6 +60,12 @@ class LYRAGAME_API ASSCharacter : public ALyraCharacter, public ICombatInterface
 public:
 	
 	ASSCharacter(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
+
+	UPROPERTY(BlueprintAssignable)
+	FOnPlayerStatChanged OnXPChangedDelegate;
+
+	UPROPERTY(BlueprintAssignable)
+	FOnPlayerStatChanged OnLevelChangedDelegate;
 	
 	UFUNCTION(BlueprintCallable, Category = "SS|Character")
 	float GetSpeed() const;
@@ -95,11 +106,26 @@ public:
 	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, BlueprintPure=false, Category = "Weapon|Level")
 	bool WeaponLevelUp(TSubclassOf<ULyraInventoryItemDefinition> WeaponItemClass, APawn* ReceivingPawn, EWeaponType WeaponType);
 
-	/* Combat Interface*/
+	/* Combat Interface */
 	virtual FVector GetCombatSocketLocation_Implementation(const FGameplayTag& MontageTag) override;
+	virtual int32 GetLevel_Implementation(EWeaponType WeaponType) const override;
+	virtual int32 GetXP_Implementation(EWeaponType WeaponType) const override;
+	virtual int32 FindLevelForXP_Implementation(int32 InXP) const override;
+	virtual void AddXP_Implementation(int32 InXP, EWeaponType WeaponType) override;
+	virtual void AddWeaponLevel_Implementation(int32 InLevel, EWeaponType WeaponType) override;
+	/* end Combat Interface */
+
+	UPROPERTY(EditDefaultsOnly)
+	TObjectPtr<ULevelUpInfo> LevelUpInfo;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	TMap<EWeaponType, int32> WeaponLevel;
+
+	UPROPERTY(VisibleAnywhere,BlueprintReadOnly)
+	TMap<EWeaponType, int32> WeaponXP;
+
+	void ApplyXP(EWeaponType WeaponType);
 	
-		
-public:
 	//Weapon
 	UPROPERTY()
 	class ASSWeaponBase* CurrentWeapon;
@@ -124,10 +150,20 @@ public:
 
 	UPROPERTY(EditAnywhere, Category="Combat")
 	FName LeftHandSocketName;
-	
+
+	UFUNCTION()
+	UMVVM_WeaponXP* GetWeaponXPViewModel() const { return WeaponXPViewModel; }
+protected:
+	virtual void BeginPlay() override;
 	
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "SS|Character", meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<USkeletalMeshComponent> Mesh1p;
-	
+
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<UMVVM_WeaponXP> WeaponXPViewModelClass;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
+	TObjectPtr<UMVVM_WeaponXP> WeaponXPViewModel;
 };
+
